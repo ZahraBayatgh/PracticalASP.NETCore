@@ -1,0 +1,28 @@
+﻿@model EmployeeViewModel
+<div class="Container">
+    <h2>Employee </h2>
+    <form asp-action="SaveEmployee" asp-controller="Home">
+        <div class="form-group">
+            <label asp-for="FirstName"></label>
+            <input class="form-control" asp-for="FirstName" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName"></label>
+            <input class="form-control" asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DepartmentName"></label>
+            <input class="form-control" asp-for="DepartmentName" />
+            <span asp-validation-for="DepartmentName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Salary"></label>
+            <input class="form-control" asp-for="Salary" />
+            <span asp-validation-for="Salary"></span>
+        </div>
+
+        <button microdev-custom-button="Save">Save</button>
+    </form>
+</div>

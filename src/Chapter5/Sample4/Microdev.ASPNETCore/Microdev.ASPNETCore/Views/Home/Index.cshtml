@@ -1,0 +1,28 @@
+﻿@using Microdev.ASPNETCore.ViewModels;
+@model List<EmployeeViewModel>
+@{
+    Layout = "_Layout";
+}
+
+<div class="Container">
+    <h3> @ViewData["Title"]</h3>
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Salary</th>
+            <th>Department Name</th>
+        </tr>
+
+        <tr>
+            @foreach (var item in Model)
+            {
+                @await Html.PartialAsync("_EmployeePartial", item)
+            }
+        </tr>
+
+    </table>
+
+    @await Html.PartialAsync("_FooterPartial")
+
+</div>

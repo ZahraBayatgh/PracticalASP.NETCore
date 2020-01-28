@@ -1,0 +1,27 @@
+﻿@model LoginViewModel
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="UserName">Username</label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="RememberMe" type="checkbox" class="checkbox-inline" />
+                <label asp-for="RememberMe">Remember Me?</label>
+                <span asp-validation-for="RememberMe" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>

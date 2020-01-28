@@ -1,0 +1,8 @@
+﻿@model List<string>
+<h1>EmployeeNames: </h1>
+<ul>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <li>@i - @Model[i]</li>
+    }
+</ul>
